@@ -4,6 +4,7 @@ import MainLayout from "./components/MainLayout";
 import Home from "./pages/Home";
 import "./static/styles/main.css";
 import Search from "./pages/Search";
+import Crypto from "./pages/Crypto";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search/" element={<Search />} />
+        <Route path="/:id" element={<Crypto />} />
         <Route path="*" element={<h2>404 not found</h2>} />
       </Routes>
     </MainLayout>
