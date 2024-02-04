@@ -11,7 +11,6 @@ const CryptoModal = ({
   useEffect(() => {
     if (typeof cryptoData === "object") {
       setCrypto(cryptoData);
-      console.log(cryptoData);
     }
 
     return () => {

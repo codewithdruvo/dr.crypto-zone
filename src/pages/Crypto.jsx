@@ -7,8 +7,6 @@ const Crypto = () => {
   const { id } = useParams();
   const { coin, coinError, coinLoading } = useCoin(id);
 
-  console.log(id);
-
   if (coinLoading && !coinError && !coin) {
     return <CardDetailsSkeleton />;
   }

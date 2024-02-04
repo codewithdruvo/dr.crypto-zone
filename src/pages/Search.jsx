@@ -3,11 +3,12 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import CardSkeleton from "../components/CardSkeleton";
 import CryptoCard from "../components/CryptoCard";
 import SkeletonScreen from "../components/SkeletonScreen";
+import useSearch from "../hooks/useSearch";
 
 const Search = () => {
   const [searchParam] = useSearchParams();
   const query = searchParam.get("query");
-  const { searchData, searchLoading, searchError } = {};
+  const { searchData, searchLoading, searchError } = useSearch(query);
   const navigate = useNavigate();
 
   if (typeof query === "string" && !query.length) {
